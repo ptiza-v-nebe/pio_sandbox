@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "pio_hello_world"
+		},
+		{
+			"path": "pio_hello_world_2"
+		}
+	],
+	"settings": {}
+}
