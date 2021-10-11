@@ -1,0 +1,10 @@
+{
+    "name": "comm_manager",
+    "version": "0.01",
+    "build": {
+        "flags": [
+            "-I include2"
+        ],
+        "extraScript": "extra_script.py"
+    }
+}
