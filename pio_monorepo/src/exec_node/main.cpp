@@ -1,6 +1,8 @@
 #include <Arduino.h>
+#include <module2/module2.h>
 
 void setup() {
+  Module2 m2 = Module2();
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(115200);
 }

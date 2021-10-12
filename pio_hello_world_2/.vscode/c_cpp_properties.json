@@ -1,0 +1,116 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/include",
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/OpenAMP",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/hid",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/cdc",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32H7xx_HAL_Driver/Inc",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32H7xx_HAL_Driver/Src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/STM32H7xx",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/open-amp/lib/include",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/libmetal/lib/include",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/virtual_driver",
+                "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/gcc",
+                "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
+                "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/PrivateInclude",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/variants/STM32H7xx/H742Z(G-I)T_H743Z(G-I)T_H747A(G-I)I_H747I(G-I)T_H750ZBT_H753ZIT_H757AII_H757IIT",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Keyboard/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Mouse/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/src",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/include",
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/OpenAMP",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/hid",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/cdc",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32H7xx_HAL_Driver/Inc",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32H7xx_HAL_Driver/Src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/STM32H7xx",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/open-amp/lib/include",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/libmetal/lib/include",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/virtual_driver",
+                    "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/gcc",
+                    "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
+                    "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/PrivateInclude",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/variants/STM32H7xx/H742Z(G-I)T_H743Z(G-I)T_H747A(G-I)I_H747I(G-I)T_H750ZBT_H753ZIT_H757AII_H757IIT",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Keyboard/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Mouse/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/src",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50200",
+                "STM32H7xx",
+                "STM32H743xx",
+                "STM32H7xx",
+                "ARDUINO=10808",
+                "ARDUINO_ARCH_STM32",
+                "ARDUINO_NUCLEO_H743ZI",
+                "BOARD_NAME=\"NUCLEO_H743ZI\"",
+                "HAL_UART_MODULE_ENABLED",
+                "USE_FULL_LL_DRIVER",
+                "VARIANT_H=\"variant_NUCLEO_H743ZI.h\"",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "compilerPath": "/Users/ivanzarevich/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mfpu=fpv4-sp-d16",
+                "-mfloat-abi=hard",
+                "-mcpu=cortex-m7",
+                "-mthumb",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
