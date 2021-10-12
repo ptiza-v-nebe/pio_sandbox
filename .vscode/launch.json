@@ -12,25 +12,25 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/.pio/build/nucleo_h743zi/firmware.elf",
-            "projectEnvName": "nucleo_h743zi",
+            "executable": "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/.pio/build/exec_node/firmware.elf",
+            "projectEnvName": "exec_node",
             "toolchainBinDir": "/Users/ivanzarevich/.platformio/packages/toolchain-gccarmnoneeabi/bin",
             "internalConsoleOptions": "openOnSessionStart",
-            "svdPath": "/Users/ivanzarevich/.platformio/platforms/ststm32/misc/svd/STM32H743.svd",
+            "svdPath": "/Users/ivanzarevich/.platformio/platforms/ststm32/misc/svd/STM32H7x3.svd",
             "preLaunchTask": {
                 "type": "PlatformIO",
-                "task": "Pre-Debug"
+                "task": "Pre-Debug (exec_node)"
             }
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/.pio/build/nucleo_h743zi/firmware.elf",
-            "projectEnvName": "nucleo_h743zi",
+            "executable": "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/.pio/build/exec_node/firmware.elf",
+            "projectEnvName": "exec_node",
             "toolchainBinDir": "/Users/ivanzarevich/.platformio/packages/toolchain-gccarmnoneeabi/bin",
             "internalConsoleOptions": "openOnSessionStart",
-            "svdPath": "/Users/ivanzarevich/.platformio/platforms/ststm32/misc/svd/STM32H743.svd"
+            "svdPath": "/Users/ivanzarevich/.platformio/platforms/ststm32/misc/svd/STM32H7x3.svd"
         }
     ]
 }

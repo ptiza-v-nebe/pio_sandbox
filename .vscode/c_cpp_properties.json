@@ -8,8 +8,9 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/include",
-                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/src",
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/include",
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/src",
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/src/exec_node/inc",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
@@ -30,9 +31,10 @@
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/gcc",
                 "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
-                "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/PrivateInclude",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino",
-                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/variants/STM32H7xx/H742Z(G-I)T_H743Z(G-I)T_H747A(G-I)I_H747I(G-I)T_H750ZBT_H753ZIT_H757AII_H757IIT",
+                "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/variants/NUCLEO_H743ZI",
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/lib/comm_manager/src",
+                "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/include2",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
                 "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
@@ -48,8 +50,9 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/include",
-                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_hello_world_2/src",
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/include",
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/src",
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/src/exec_node/inc",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
@@ -70,9 +73,10 @@
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/gcc",
                     "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
-                    "/Users/ivanzarevich/.platformio/packages/framework-cmsis/CMSIS/DSP/PrivateInclude",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/cores/arduino",
-                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/variants/STM32H7xx/H742Z(G-I)T_H743Z(G-I)T_H747A(G-I)I_H747I(G-I)T_H750ZBT_H753ZIT_H757AII_H757IIT",
+                    "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/variants/NUCLEO_H743ZI",
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/lib/comm_manager/src",
+                    "/Users/ivanzarevich/MyProjects/dlr/thruststand/pio_monorepo/include2",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
                     "/Users/ivanzarevich/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
@@ -87,7 +91,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=50200",
+                "PLATFORMIO=50201",
                 "STM32H7xx",
                 "STM32H743xx",
                 "STM32H7xx",
@@ -96,8 +100,6 @@
                 "ARDUINO_NUCLEO_H743ZI",
                 "BOARD_NAME=\"NUCLEO_H743ZI\"",
                 "HAL_UART_MODULE_ENABLED",
-                "USE_FULL_LL_DRIVER",
-                "VARIANT_H=\"variant_NUCLEO_H743ZI.h\"",
                 ""
             ],
             "cStandard": "c11",
