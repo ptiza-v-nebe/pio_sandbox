@@ -1,0 +1,25 @@
+File "/Users/ivanzarevich/.platformio/penv/bin/platformio", line 8, in <module>
+    sys.exit(main())File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/__main__.py", line 130, in main
+    cli()  # pylint: disable=no-value-for-parameterFile "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 1137, in __call__
+    return self.main(*args, **kwargs)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 1062, in main
+    rv = self.invoke(ctx)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/commands/__init__.py", line 44, in invoke
+    return super(PlatformioCLI, self).invoke(ctx)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 1668, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 763, in invoke
+    return __callback(*args, **kwargs)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/commands/project.py", line 197, in project_init
+    pg.generate()File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/ide/projectgenerator.py", line 125, in generate
+    tpl_vars = self._load_tplvars()File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/ide/projectgenerator.py", line 76, in _load_tplvars
+    tpl_vars.update(load_project_ide_data(self.project_dir, self.env_name) or {})File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/project/helpers.py", line 148, in load_project_ide_data
+    result.update(_load_project_ide_data(project_dir, missed_env_names))File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/project/helpers.py", line 162, in _load_project_ide_data
+    result = CliRunner().invoke(cmd_run, args)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/testing.py", line 408, in invoke
+    return_value = cli.main(args=args or (), prog_name=prog_name, **extra)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 1062, in main
+    rv = self.invoke(ctx)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/core.py", line 763, in invoke
+    return __callback(*args, **kwargs)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/commands/run/command.py", line 134, in cli
+    process_env(File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/commands/run/command.py", line 176, in process_env
+    result = {"env": name, "duration": time(), "succeeded": ep.process()}File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/commands/run/processor.py", line 67, in process
+    result = init_platform(self.options["platform"]).run(File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/platform/_run.py", line 81, in run
+    result = self._run_scons(variables, targets, jobs)File "/Users/ivanzarevich/.platformio/penv/lib/python3.8/site-packages/platformio/platform/_run.py", line 100, in _run_scons
+    for line in traceback.format_stack():{'pioenv': 'exec_node', 'project_config': '/Users/ivanzarevich/MyProjects/dlr/pio_sandbox/pio_monorepo/platformio.ini', 'platform_manifest': '/Users/ivanzarevich/.platformio/platforms/ststm32/platform.json', 'build_script': '/Users/ivanzarevich/.platformio/platforms/ststm32/builder/main.py'}
