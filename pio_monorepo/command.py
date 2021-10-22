@@ -20,12 +20,10 @@ from fnmatch import fnmatch
 import click
 from serial.tools import miniterm
 
-
-from platformio import exception, app, fs, proc, util
+from platformio import exception, fs, proc, util
 from platformio.commands.device import helpers as device_helpers
 from platformio.platform.factory import PlatformFactory
 from platformio.project.exception import NotPlatformIOProjectError
-from platformio.package.manager.core import get_core_package_dir
 
 
 @click.group(short_help="Device manager & serial/socket monitor")
@@ -174,15 +172,15 @@ def device_list(  # pylint: disable=too-many-branches
     help="Load configuration from `platformio.ini` and specified environment",
 )
 def device_monitor(**kwargs):  # pylint: disable=too-many-branches
-
-    def exec_monitor_script(monitor_script_path):
-        file_exists = os.path.isfile(os.path.join(kwargs["project_dir"], monitor_script_path)) 
-        if not file_exists:
-            return [None, file_exists]
+    def exec_monitor_script(monitor_script_relative_path):
+        monitor_script_global_path = os.path.join(kwargs["project_dir"], monitor_script_relative_path)
+        monitor_script_valid = os.path.isfile(monitor_script_global_path) 
+        if not monitor_script_valid:
+            return [None, monitor_script_valid]
 
         args = [
             proc.get_pythonexe_path(),
-            os.path.join(kwargs["project_dir"], monitor_script_path),
+            monitor_script_global_path,
         ]
 
         MONITOR_PORT_SCRIPT = None
@@ -190,13 +188,17 @@ def device_monitor(**kwargs):  # pylint: disable=too-many-branches
         def _on_stdout_line(line):
             nonlocal MONITOR_PORT_SCRIPT
             MONITOR_PORT_SCRIPT = line
-            
+        
         proc.exec_command(
             args,
             stdout=proc.LineBufferedAsyncPipe(line_callback=_on_stdout_line),
             stderr=None
         )
-        return [MONITOR_PORT_SCRIPT[0:-1], file_exists]
+
+        if MONITOR_PORT_SCRIPT == None:
+            monitor_script_valid = False
+
+        return [MONITOR_PORT_SCRIPT, monitor_script_valid]
 
     # load default monitor filters
     filters_dir = os.path.join(fs.get_source_dir(), "commands", "device", "filters")
@@ -221,14 +223,12 @@ def device_monitor(**kwargs):  # pylint: disable=too-many-branches
             platform = PlatformFactory.new(project_options["platform"])
             device_helpers.register_platform_filters(platform, options=kwargs)
 
-    
     # execute custom monitor port finding script
-    MONITOR_PORT_SCRIPT, monitor_script_exists = exec_monitor_script(
+    MONITOR_PORT_SCRIPT, monitor_script_valid = exec_monitor_script(
         project_options["custom_monitor_script"]
     )
 
-    if not kwargs["port"] and monitor_script_exists:
-        print(MONITOR_PORT_SCRIPT)
+    if not kwargs["port"] and monitor_script_valid:
         kwargs["port"] = MONITOR_PORT_SCRIPT
     elif not kwargs["port"]:
         ports = util.get_serial_ports(filter_hwid=True)
@@ -254,7 +254,6 @@ def device_monitor(**kwargs):  # pylint: disable=too-many-branches
                 kwargs["port"] = item["port"]
                 break
 
-
     # override system argv with patched options
     sys.argv = ["monitor"] + device_helpers.options_to_argv(
         kwargs,
@@ -262,11 +261,6 @@ def device_monitor(**kwargs):  # pylint: disable=too-many-branches
         ignore=("port", "baud", "rts", "dtr", "environment", "project_dir"),
     )
 
-    #import traceback
-    #for line in traceback.format_stack():
-    #    print(line.strip())
-
-    #print(kwargs)
     if not kwargs["quiet"]:
         click.echo(
             "--- Available filters and text transformations: %s"
